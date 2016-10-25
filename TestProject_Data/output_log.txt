@@ -6,26 +6,26 @@ Direct3D:
     Vendor:   NVIDIA
     VRAM:     6100 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Joffrey\Documents\UnityProjects\TestProject\TestProject_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Joffrey\Documents\UnityProjects\TestProject\TestProject_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Joffrey\Documents\UnityProjects\TestProject\TestProject_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Joffrey\Documents\UnityProjects\TestProject\TestProject_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Joffrey\Documents\UnityProjects\TestProject\TestProject_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Joffrey\Documents\UnityProjects\TestProject\TestProject_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Joffrey\Documents\UnityProjects\TestProject\TestProject_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Joffrey\Documents\UnityProjects\TestProject\TestProject_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.130 seconds
-Platform assembly: C:\Users\Joffrey\Documents\UnityProjects\TestProject\TestProject_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Joffrey\Documents\UnityProjects\TestProject\TestProject_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Joffrey\Documents\UnityProjects\SandboxProjectUnity\TestProject_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Joffrey\Documents\UnityProjects\SandboxProjectUnity\TestProject_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Joffrey\Documents\UnityProjects\SandboxProjectUnity\TestProject_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Joffrey\Documents\UnityProjects\SandboxProjectUnity\TestProject_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Joffrey\Documents\UnityProjects\SandboxProjectUnity\TestProject_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Joffrey\Documents\UnityProjects\SandboxProjectUnity\TestProject_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Joffrey\Documents\UnityProjects\SandboxProjectUnity\TestProject_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Joffrey\Documents\UnityProjects\SandboxProjectUnity\TestProject_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.045 seconds
+Platform assembly: C:\Users\Joffrey\Documents\UnityProjects\SandboxProjectUnity\TestProject_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Joffrey\Documents\UnityProjects\SandboxProjectUnity\TestProject_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.812641 ms
+UnloadTime: 0.710716 ms
 I am alive and my name is Worg
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1eb4 -> priority: 1 
-  Thread -> id: 1d60 -> priority: 1 
+  Thread -> id: 168c -> priority: 1 
+  Thread -> id: 23e0 -> priority: 1 
