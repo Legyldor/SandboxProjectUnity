@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public string myName;
     public Boolean isFront;
     public Animator anim;
+    public Animation animation;
     public float speed;
     public Rigidbody2D rigidBody;
     public int standBackHash;
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public Transform transform;
     public bool right;
     public bool left;
+    public bool attack;
     // Use this for initialization
     void Start()
     {
@@ -21,10 +23,12 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         transform = GetComponent<Transform>();
         rigidBody = GetComponent<Rigidbody2D>();
+        animation = GetComponent<Animation>();
         speed = 5f;
         left = true;
         right = false;
         isFront = true;
+        attack = false;
     }
 
     // Update is called once per frame
@@ -33,7 +37,45 @@ public class PlayerController : MonoBehaviour
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
         transform.position += move * speed * Time.deltaTime;
 
+        IsInAttack();
+
         AnimateDirection(move);
+
+        if(Input.GetKeyDown(KeyCode.Mouse0)){
+            AnimateAttack();
+        }
+    }
+
+    void IsInAttack()
+    {
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_Front") ||
+            anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_Back"))
+        {
+            this.attack = true;
+            if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+            {
+                this.attack = false;
+            }
+        }
+    }
+
+    void AnimateAttack()
+    {
+        if(isFront){
+            Animate("Attack_Front");
+        }
+        else
+        {
+            Animate("Attack_Back");
+        }
+    }
+
+    void Animate(String animName)
+    {
+        if (!attack)
+        {
+            anim.CrossFade(Animator.StringToHash(animName), 0f);
+        }
     }
 
     void AnimateDirection(Vector3 move)
@@ -53,7 +95,7 @@ public class PlayerController : MonoBehaviour
             AnimateRun(move);
             if (left)
             {
-                anim.transform.Rotate(new Vector3(0, 1, 0), 180);
+                AnimateRotate();
                 right = true;
                 left = false;
             }
@@ -61,31 +103,36 @@ public class PlayerController : MonoBehaviour
         if(move.x < 0){
             AnimateRun(move);
             if(right){
-                anim.transform.Rotate(new Vector3(0, 1, 0), 180);
+                AnimateRotate();
                 right = false;
                 left = true;
             }
         }
         if(move.x == 0 && move.y == 0){
             if(isFront){
-                anim.CrossFade(Animator.StringToHash("Stand_Front"), 0f);
+                Animate("Stand_Front");
             }
             else
             {
-                anim.CrossFade(Animator.StringToHash("Stand_Back"), 0f);
+                Animate("Stand_Back");
             }
         }
+    }
+
+    void AnimateRotate()
+    {
+        anim.transform.Rotate(new Vector3(0, 1, 0), 180);
     }
 
     void AnimateRun(Vector3 move)
     {
         if (isFront)
         {
-            anim.CrossFade(Animator.StringToHash("Run_Front"), 0f);
+            Animate("Run_Front");
         }
         else
         {
-            anim.CrossFade(Animator.StringToHash("Run_Back"), 0f);
+            Animate("Run_Back");
         }
     }
 }
