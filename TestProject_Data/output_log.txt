@@ -14,18 +14,28 @@ Platform assembly: C:\Users\Joffrey\Documents\UnityProjects\SandboxProjectUnity\
 Loading C:\Users\Joffrey\Documents\UnityProjects\SandboxProjectUnity\TestProject_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Joffrey\Documents\UnityProjects\SandboxProjectUnity\TestProject_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Joffrey\Documents\UnityProjects\SandboxProjectUnity\TestProject_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.113 seconds
+- Completed reload, in  0.110 seconds
 Platform assembly: C:\Users\Joffrey\Documents\UnityProjects\SandboxProjectUnity\TestProject_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Joffrey\Documents\UnityProjects\SandboxProjectUnity\TestProject_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.764839 ms
+UnloadTime: 0.825679 ms
+I am alive and my name is Worg
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.242963 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 211.
+Total: 0.112197 ms (FindLiveObjects: 0.015407 ms CreateObjectMapping: 0.011061 ms MarkObjects: 0.075061 ms  DeleteObjects: 0.010271 ms)
+
 I am alive and my name is Worg
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1a94 -> priority: 1 
-  Thread -> id: 1258 -> priority: 1 
+  Thread -> id: 23c0 -> priority: 1 
+  Thread -> id: 219c -> priority: 1 

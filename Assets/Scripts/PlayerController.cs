@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public bool right;
     public bool left;
     public bool attack;
+    public bool inGravity;
     // Use this for initialization
     void Start()
     {
@@ -29,6 +31,7 @@ public class PlayerController : MonoBehaviour
         right = false;
         isFront = true;
         attack = false;
+        inGravity = false;
     }
 
     // Update is called once per frame
@@ -43,6 +46,22 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Mouse0)){
             AnimateAttack();
+        }
+
+        if (inGravity)
+        {
+            Vector3 forceDirection = transform.position - transform.position;
+
+            // apply force on target towards me
+            GetComponent<Rigidbody2D>().AddForce(forceDirection.normalized * 1 * Time.fixedDeltaTime);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.name == "TeleportSquare")
+        {
+            SceneManager.LoadScene("TestGravity");
         }
     }
 
